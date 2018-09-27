@@ -63,7 +63,7 @@ module.exports = function() {
       var universalSlash = plugin.opts && plugin.opts.universalSlash;
 
       if (base) {
-		base = base.match(/^(.*?)[\//]*$/)[1] + path.sep;
+        base = base.match(/^(.*?)[\\/]*$/)[1] + path.sep;
       }
 
       if (typeof fileName === 'function') {
@@ -129,9 +129,9 @@ module.exports = function() {
         }
 
         if (universalSlash === '/') {
-          fn = fn.replace(/\\/g, universalSlash)
+          fn = fn.replace(/\\/g, universalSlash);
         } else if (universalSlash === '\\') {
-          fn = fn.replace(/\//g, universalSlash)
+          fn = fn.replace(/\//g, universalSlash);
         }
 
         translate.comments = {
