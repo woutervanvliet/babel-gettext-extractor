@@ -84,11 +84,12 @@ module.exports = function() {
             ...headers,
           };
           data.translations.context = data.translations.context || {};
+          data.translations[''] = data.translations[''] || {};
         } else {
           data = {
             charset: 'UTF-8',
             headers: headers,
-            translations: { context: {} },
+            translations: { context: {}, '': {} },
           };
         }
 
@@ -98,7 +99,7 @@ module.exports = function() {
           || DEFAULT_HEADERS['content-type'];
       }
 
-      var defaultContext = data.translations.context;
+      var defaultContext = data.translations[''];
       var nplurals = /nplurals ?= ?(\d)/.exec(headers['plural-forms'])[1];
 
       const callee = nodePath.node.callee;
