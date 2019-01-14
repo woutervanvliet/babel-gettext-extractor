@@ -1,6 +1,6 @@
 {
   "name": "babel-gettext-extractor",
-  "version": "3.0.0-s05",
+  "version": "3.0.0-s06",
   "description": " Extract gettext string with babel",
   "main": "index.js",
   "scripts": {
